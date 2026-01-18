@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_messages
+    description: "Cleaned telegram messages for the medical warehouse"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: message_text
+        description: "The raw text of the telegram message"

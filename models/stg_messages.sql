@@ -1,0 +1,1 @@
+SELECT * FROM raw.telegram_data WHERE message_text IS NOT NULL
