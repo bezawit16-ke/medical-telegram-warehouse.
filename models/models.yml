@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: fct_messages
+    description: "Main fact table for medical messages"
+    columns:
+      - name: message_id
+        tests:
+          - unique
+          - not_null
+      - name: message_text
+        tests:
+          - not_null
+
+  - name: dim_channels
+    description: "Dimension table for unique medical channels"
+    columns:
+      - name: channel_username
+        tests:
+          - unique
+          - not_null
